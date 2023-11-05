@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>自我介紹</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0073e6;
+            color: #fff;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #personal-info, #hobbies {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            max-width: 400px;
+        }
+
+        h2 {
+            color: #0073e6;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin: 0.5em 0;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding: 0;
+        }
+
+        button {
+            background-color: #0073e6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0050a4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>自我介紹</h1>
+    </header>
+    <div class="container">
+        <div id="personal-info">
+            <h2>個人資料</h2>
+            <p>名字: 葉建斌</p>
+            <p>年齡: 19</p>
+            <p>專業: 資訊工程</p>
+        </div>
+        <div id="hobbies">
+            <h2>愛好</h2>
+            <ul>
+                <li>玩電腦遊戲</li>
+                <li>彈吉他</li>
+                <li>唱歌</li>
+            </ul>
+        </div>
+        <button id="toggle-hobbies">切換愛好</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#toggle-hobbies").click(function() {
+                $("#hobbies").slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>
